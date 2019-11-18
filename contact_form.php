@@ -34,10 +34,6 @@
       $error['email'] = $error_open . "Please fill in required(marked with asterisk) fields!" . $error_close;
       $valid_form = false;
    }
-   if($form['message'] == ""){
-      $error['message'] =$error_open . "Please fill in required(marked with asterisk) fields!" . $error_close;
-      $valid_form = false;
-   }
 
 
     // next step is checking form validity => if an element that is not valid we want to display the form again and set these value to false
