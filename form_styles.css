@@ -1,0 +1,123 @@
+:root {
+   --contactformMain: #222;
+   --contactformSecond: rgb(102, 102, 102);
+   --contactformBgMain: #fafafa;
+   --contactformBgSecond: #959697;
+   --contactformDistinct: #4557bb;
+   --contactformDanger: rgb(233, 41, 41);
+}
+
+html {
+   box-sizing: border-box;
+   font-size: 10px;
+}
+
+
+*,
+*:before,
+*:after {
+     box-sizing: inherit;
+}
+
+body {
+   margin: 0;
+   padding: 0;
+   overflow-y: scroll;
+   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+   font-size: 1.8rem;
+   color: var(--contactformMain);
+   background-color: var(--contactformBgSecond);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font-weight: 700;
+   text-align: center;
+}
+
+p {
+   line-height: 1.45;
+   margin-bottom: 1rem;
+   font-weight: 300;
+   text-align: center;
+}
+
+.container {
+   display: flex;
+   flex-direction: column;
+   padding: 1rem 2rem;
+   margin: 0 auto;
+   width: 70%;
+   border: 1px solid transparent;
+   border-radius: 5px;
+   background: var(--contactformBgMain);
+}
+
+.contact_form {
+   display: flex;
+   flex-direction: column;
+   margin-top: 2rem;
+}
+.form_item {
+   display: flex;
+}
+
+.form_item-first,
+.form_item-second {
+      display: flex;
+}
+
+.form_item-first {
+   justify-content: flex-end;
+   align-items: center;
+   flex: 1;
+}
+
+.form_item-second {
+   justify-content: flex-start;
+   flex: 2;
+   padding: 1rem 3rem;
+   display: flex;
+   flex-direction: column;
+}
+
+textarea,
+input {
+   width: 50%;
+   border: 1px solid var(--contactformSecond);
+   border-radius: 5px;
+   padding: .8rem;
+   font-size: 1.35rem;
+}
+
+.form_submit {
+   display: flex;
+   width: 100%;
+   margin: 20px auto;
+}
+
+input[type="submit"]{
+   width: 25%;
+   display: block;
+   margin: 0 auto;
+   padding: .8rem;
+   background-color: var(--contactformDistinct);
+   color: var(--contactformBgMain);
+   font-size: 2rem;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus{
+   background-color:var(--contactformDanger);
+}
+.fine {
+   color: var(--contactformDanger);
+}
+span.aster {
+   color: var(--contactformDanger);
+   margin: .2rem;
+   font-weight: bold;
+}
