@@ -43,6 +43,11 @@
       $valid_form = false;
    }
    
+  // for name
+   if($error['name'] == '' && !preg_match('/^[A-Z]+$/i', $form['name']) ) {
+      $error['name'] = $error_open . "Please, enter a valid name!" . $error_close;
+      $valid_form = false;
+   }
 
     // next step is checking form validity => if an element that is not valid we want to display the form again and set these value to false
     if($valid_form){
