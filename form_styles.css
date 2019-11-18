@@ -121,3 +121,8 @@ span.aster {
    margin: .2rem;
    font-weight: bold;
 }
+label.error{
+   font-size: 12px;
+   font-family: monospace;
+   color: red;
+}

@@ -2,7 +2,7 @@
      // variables
  $to = 'laxatzi@gmail.com';
  $subject = 'Message for your website';
- $error_open = "<label class='error'>";
+ $error_open = "<label class='error' style='color:red;font-family:monospace;font-size:15px'>";
  $error_close = "</label>";
  $valid_form = true;
  $redirect = "success.php"; // what happens after submitting  succeeds
@@ -23,18 +23,18 @@
 
    // get form data
    foreach($form_elements as $element){
-      $form_validation[$element] = htmlspecialchars($_POST[$element]); //htmlspecialchars make sure all characters in the input are valid...this statement is gonna loop through each or our form elements and its gonna set our form array by grab the form data (names) from the form 
+      $form[$element] = htmlspecialchars($_POST[$element]); //htmlspecialchars make sure all characters in the input are valid...this statement is gonna loop through each or our form elements and its gonna set our form array by grab the form data (names) from the form 
    }
     // the next step is to actually check this form elements
-    if($form_validation['name'] == ""){
+    if($form['name'] == ""){
        $error['name'] = $error_open . "Please fill in required(marked with asterisk) fields!" . $error_close;
        $valid_form = false;
     }
-    if($form_validation['email'] == ""){
+    if($form['email'] == ""){
       $error['email'] = $error_open . "Please fill in required(marked with asterisk) fields!" . $error_close;
       $valid_form = false;
    }
-   if($form_validation['message'] == ""){
+   if($form['message'] == ""){
       $error['message'] =$error_open . "Please fill in required(marked with asterisk) fields!" . $error_close;
       $valid_form = false;
    }
@@ -52,7 +52,7 @@
    } // end if
    else{
       foreach($form_elements as $element){
-         $form_validation[$element] = '';
+         $form[$element] = '';
       }
       // DISPLAY FORM (since its not submitted yet)
          include('form_validation.php');

@@ -41,7 +41,7 @@ if (isset($_POST['submit']))
 		}
 		if ($form['email'] == '')
 		{
-			$error['email'] = $error_open . "Please fill in all required fields!" . $error_close;
+			$error['email'] = $error_open . "Please fill in all  fields!" . $error_close;
 			$valid_form = FALSE;
 		}
 		
