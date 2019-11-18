@@ -36,10 +36,14 @@
    }
    
    //check formating
-
-   if($error['name'] == '' && !preg_match('/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/', $form['name']) ) {
-      $error['email'] = $error_open . "Please, fill in a valid email!" . $error_close;
+   
+   // for email
+   if($error['email'] == '' && !preg_match('/^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/', $form['email']) ) {
+      $error['email'] = $error_open . "Please, enter a valid email!" . $error_close;
    }
+   
+   // for name field
+   if($error[])
 
     // next step is checking form validity => if an element that is not valid we want to display the form again and set these value to false
     if($valid_form){
