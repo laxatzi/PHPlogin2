@@ -36,7 +36,7 @@
                 <label for="email"><span class="aster">&ast;</span>Email:</label>
             </div>
             <div class="form_item-second">
-               <input type="email" id="email" name="email" placeholder="Enter your email"  value="<?php echo $form['email']; ?>"><?php echo $error['email'] ?>
+               <input type="text" id="email" name="email" placeholder="Enter your email"  value="<?php echo $form['email']; ?>"><?php echo $error['email'] ?>
             </div>
          </div>
 
